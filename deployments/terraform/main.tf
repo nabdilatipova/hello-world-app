@@ -9,6 +9,10 @@ module "helm_deploy" {
   }          
 }
 
+output deployment_endpoint {
+  value       = "${lookup(var.deployment_endpoint, "${var.deployment_environment}")}.${var.google_domain_name}"
+}
+
 variable "deployment_name" {
     default = "hello-world"
     description = "- (Optional) The name of the deployment."
@@ -30,11 +34,12 @@ variable "deployment_endpoint" {
     description = "- (Optional) The endpooint of the deployment."
 }
 
-variable "google_domain_name" {
-  default = "nasyikataws.com"
-}
+
 
 variable "deployment_image" {
-    default = "docker.nasyikataws.com/hello-world-stage:2440297"
+    default = "docker.nasyikataws.com/hello-world-stage:860f1c9"
     description = "- (Optional) The docker image of the deployment."
+}
+variable "google_domain_name" {
+  default = "nasyikataws.com"
 }

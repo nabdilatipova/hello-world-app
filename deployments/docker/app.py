@@ -12,7 +12,7 @@ def hello_world():
     })
 
 @app.route('/nasyikat')
-def comming_soon():
+def nasyikat():
     return jsonify({
         'message': 'This Nasyikats page'
     })

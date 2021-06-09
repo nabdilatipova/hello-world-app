@@ -37,7 +37,7 @@ variable "deployment_endpoint" {
 
 
 variable "deployment_image" {
-    default = "docker.nasyikataws.com/hello-world-stage:860f1c9"
+    default = "docker.nasyikataws.com/hello-world-stage:a932ede"
     description = "- (Optional) The docker image of the deployment."
 }
 variable "google_domain_name" {
